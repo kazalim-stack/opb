@@ -1,0 +1,188 @@
+.admin-feed-page,
+.user-feed-page {
+    min-height: 100vh;
+    padding: 30px 36px 50px;
+    background:
+        linear-gradient(
+            180deg,
+            #f8faff 0%,
+            #f4f7fb 100%
+        );
+}
+.admin-feed-header,
+.user-feed-header {
+    width: min(1450px, 100%);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+.admin-feed-brand,
+.user-feed-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.admin-feed-brand-mark,
+.user-feed-brand-mark {
+    display: flex;
+    width: 43px;
+    height: 43px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background:
+        linear-gradient(
+            135deg,
+            #3949ab,
+            #6c63ff
+        );
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 800;
+    box-shadow:
+        0 7px 18px
+        rgba(57, 73, 171, 0.18);
+}
+.admin-feed-brand h1,
+.user-feed-brand h1 {
+    margin: 0;
+    color: #172033;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+}
+.admin-feed-brand p,
+.user-feed-brand p {
+    margin: 3px 0 0;
+    color: #667085;
+    font-size: 11px;
+}
+.admin-feed-brand p strong,
+.user-feed-brand p strong {
+    color: #344054;
+    font-weight: 750;
+}
+.admin-feed-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.admin-feed-back-button,
+.admin-feed-logout-button,
+.user-feed-logout-button {
+    display: inline-flex;
+    min-height: 38px;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 0 13px;
+    border-radius: 9px;
+    font-size: 11px;
+    font-weight: 750;
+    cursor: pointer;
+    transition:
+        transform 0.18s
+            cubic-bezier(0.22, 1, 0.36, 1),
+        background-color 0.18s ease,
+        border-color 0.18s ease,
+        box-shadow 0.18s ease;
+}
+.admin-feed-back-button {
+    border: 1px solid #d7dde7;
+    background: #ffffff;
+    color: #344054;
+}
+.admin-feed-back-button:hover {
+    border-color: #c3cbd8;
+    background: #f8fafc;
+    box-shadow:
+        0 4px 12px
+        rgba(31, 41, 55, 0.07);
+    transform: translateY(-1px);
+}
+.admin-feed-back-button span {
+    color: #667eea;
+    font-size: 14px;
+    font-weight: 800;
+}
+.admin-feed-logout-button,
+.user-feed-logout-button {
+    border: 1px solid #e4cfd2;
+    background: #fffafb;
+    color: #a74752;
+}
+.admin-feed-logout-button:hover,
+.user-feed-logout-button:hover {
+    border-color: #d9b7bb;
+    background: #fff2f3;
+    box-shadow:
+        0 4px 12px
+        rgba(167, 71, 82, 0.08);
+    transform: translateY(-1px);
+}
+.admin-feed-back-button:active,
+.admin-feed-logout-button:active,
+.user-feed-logout-button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+.admin-feed-divider,
+.user-feed-divider {
+    width: min(1450px, 100%);
+    height: 1px;
+    margin: 22px auto 30px;
+    background: #dfe4eb;
+}
+.user-feed-page .user-feed-header {
+    max-width: 1180px;
+}
+.user-feed-page .user-feed-divider {
+    max-width: 1180px;
+}
+.app-loading {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #667085;
+    background: #f7f9fc;
+    font-size: 13px;
+}
+.app-loading-spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #e1e6ef;
+    border-top-color: #3949ab;
+    border-radius: 50%;
+    animation:
+        openbook-spin 0.9s
+        linear infinite;
+}
+@media (max-width: 680px) {
+    .admin-feed-page,
+    .user-feed-page {
+        padding: 20px 12px 35px;
+    }
+    .admin-feed-header,
+    .user-feed-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .admin-feed-actions {
+        width: 100%;
+    }
+    .admin-feed-back-button,
+    .admin-feed-logout-button,
+    .user-feed-logout-button {
+        flex: 1;
+    }
+    .admin-feed-divider,
+    .user-feed-divider {
+        margin-top: 18px;
+        margin-bottom: 22px;
+    }
+}

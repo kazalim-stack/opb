@@ -1,0 +1,119 @@
+.admin-page {
+    animation:
+        admin-page-enter 0.35s
+        cubic-bezier(0.22, 1, 0.36, 1);
+}
+@keyframes admin-page-enter {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.admin-user-card,
+.admin-post-card,
+.admin-stat-card {
+    transition:
+        transform 0.22s
+            cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.22s ease,
+        border-color 0.22s ease;
+}
+.admin-user-card:hover,
+.admin-post-card:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 10px 28px
+        rgba(31, 41, 55, 0.07);
+}
+.admin-stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 10px 26px
+        rgba(31, 41, 55, 0.07);
+}
+.admin-user-action,
+.admin-post-action,
+.admin-secondary-button,
+.admin-action-button,
+.admin-logout-button,
+.admin-confirm-cancel,
+.admin-confirm-submit {
+    transition:
+        transform 0.18s
+            cubic-bezier(0.22, 1, 0.36, 1),
+        background-color 0.18s ease,
+        border-color 0.18s ease,
+        box-shadow 0.18s ease,
+        opacity 0.18s ease;
+}
+.admin-user-action:hover:not(:disabled),
+.admin-post-action:hover:not(:disabled),
+.admin-secondary-button:hover:not(:disabled),
+.admin-action-button:hover:not(:disabled),
+.admin-logout-button:hover:not(:disabled),
+.admin-confirm-cancel:hover:not(:disabled),
+.admin-confirm-submit:hover:not(:disabled) {
+    transform: translateY(-1px);
+}
+.admin-user-action:active:not(:disabled),
+.admin-post-action:active:not(:disabled),
+.admin-secondary-button:active:not(:disabled),
+.admin-action-button:active:not(:disabled),
+.admin-logout-button:active:not(:disabled),
+.admin-confirm-cancel:active:not(:disabled),
+.admin-confirm-submit:active:not(:disabled) {
+    transform: translateY(0);
+}
+.admin-confirm-overlay {
+    animation:
+        admin-confirm-fade 0.22s
+        cubic-bezier(0.22, 1, 0.36, 1);
+}
+.admin-confirm-modal {
+    animation:
+        admin-confirm-enter 0.28s
+        cubic-bezier(0.22, 1, 0.36, 1);
+}
+@keyframes admin-confirm-fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes admin-confirm-enter {
+    from {
+        opacity: 0;
+        transform:
+            translateY(10px)
+            scale(0.985);
+    }
+    to {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+.admin-confirm-submit:hover:not(:disabled) {
+    box-shadow:
+        0 5px 12px
+        rgba(31, 41, 55, 0.12);
+}
+.admin-loading-spinner {
+}
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

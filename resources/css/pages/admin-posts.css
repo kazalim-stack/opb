@@ -1,0 +1,307 @@
+.admin-posts-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 20px;
+    padding: 22px 24px;
+    border: 1px solid #e1e7ef;
+    border-radius: 17px;
+    background: #ffffff;
+    box-shadow:
+        0 8px 28px
+        rgba(31, 41, 55, 0.05);
+}
+.admin-posts-summary h2 {
+    margin: 5px 0 3px;
+    color: #172033;
+    font-size: 19px;
+    font-weight: 750;
+    letter-spacing: -0.02em;
+}
+.admin-posts-summary p {
+    margin: 0;
+    color: #667085;
+    font-size: 12px;
+}
+.admin-posts-summary-count {
+    min-width: 110px;
+    padding: 12px 15px;
+    border: 1px solid #e1e7ef;
+    border-radius: 12px;
+    background: #f8f9fc;
+    text-align: center;
+}
+.admin-posts-summary-count span {
+    display: block;
+    color: #98a2b3;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.09em;
+}
+.admin-posts-summary-count strong {
+    display: block;
+    margin-top: 3px;
+    color: #3949ab;
+    font-size: 25px;
+    font-weight: 800;
+}
+.admin-posts-error {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    margin-bottom: 18px;
+    padding: 15px 17px;
+    border: 1px solid #f0d3d6;
+    border-radius: 13px;
+    background: #fff7f8;
+}
+.admin-posts-error .admin-error-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+}
+.admin-posts-error strong {
+    display: block;
+    color: #8e313b;
+    font-size: 12px;
+}
+.admin-posts-error p {
+    margin: 3px 0 0;
+    color: #a34d56;
+    font-size: 11px;
+}
+.admin-posts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+.admin-post-card {
+    overflow: hidden;
+    border: 1px solid #e1e7ef;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow:
+        0 5px 18px
+        rgba(31, 41, 55, 0.04);
+}
+.admin-post-card:hover {
+    border-color: #d5dce6;
+    box-shadow:
+        0 8px 24px
+        rgba(31, 41, 55, 0.07);
+    transform: translateY(-1px);
+}
+.admin-post-hidden {
+    background: #fcfcfd;
+}
+.admin-post-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 17px 19px;
+    border-bottom: 1px solid #edf0f4;
+}
+.admin-post-identity {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+.admin-post-avatar {
+    display: flex;
+    width: 37px;
+    height: 37px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 11px;
+    background:
+        linear-gradient(
+            135deg,
+            #3949ab,
+            #6c63ff
+        );
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 800;
+}
+.admin-post-author-label {
+    display: block;
+    color: #98a2b3;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+}
+.admin-post-author {
+    display: block;
+    margin-top: 2px;
+    color: #344054;
+    font-size: 12px;
+}
+.admin-post-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 9px;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 750;
+}
+.admin-post-status-visible {
+    border: 1px solid #dce9df;
+    background: #f4faf5;
+    color: #41804f;
+}
+.admin-post-status-hidden {
+    border: 1px solid #f0dfbd;
+    background: #fff9ed;
+    color: #a97017;
+}
+.admin-post-content {
+    padding: 19px;
+}
+.admin-post-content h2 {
+    margin: 0;
+    color: #172033;
+    font-size: 18px;
+    font-weight: 750;
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+    word-break: break-word;
+}
+.admin-post-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 10px;
+}
+.admin-post-meta span {
+    color: #98a2b3;
+    font-size: 10px;
+    font-weight: 600;
+}
+.admin-post-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 13px 19px;
+    border-top: 1px solid #edf0f4;
+    background: #fafbfc;
+}
+.admin-post-management-label {
+    color: #98a2b3;
+    font-size: 10px;
+    line-height: 1.45;
+}
+.admin-post-actions {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    flex-shrink: 0;
+}
+.admin-post-action {
+    min-height: 34px;
+    padding: 0 12px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-size: 10px;
+    font-weight: 750;
+}
+.admin-post-action:hover:not(:disabled) {
+    transform: translateY(-1px);
+}
+.admin-post-action:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+.admin-post-action-success {
+    border-color: #cfe4d4;
+    background: #f2faf3;
+    color: #41804f;
+}
+.admin-post-action-success:hover:not(:disabled) {
+    border-color: #b9d8c0;
+    background: #eaf7ec;
+}
+.admin-post-action-warning {
+    border-color: #ecd8b2;
+    background: #fff9ed;
+    color: #a97017;
+}
+.admin-post-action-warning:hover:not(:disabled) {
+    border-color: #dfc68f;
+    background: #fff4dc;
+}
+.admin-post-action-danger {
+    border-color: #edcdd1;
+    background: #fff5f6;
+    color: #b84752;
+}
+.admin-post-action-danger:hover:not(:disabled) {
+    border-color: #e1b5ba;
+    background: #ffedef;
+}
+.admin-empty-posts {
+    padding: 65px 25px;
+    border: 1px solid #e1e7ef;
+    border-radius: 17px;
+    background: #ffffff;
+    text-align: center;
+    box-shadow:
+        0 8px 28px
+        rgba(31, 41, 55, 0.04);
+}
+.admin-empty-posts-icon {
+    display: flex;
+    width: 48px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 13px;
+    background: #eef0ff;
+    color: #4b5bc6;
+    font-size: 16px;
+    font-weight: 800;
+}
+.admin-empty-posts h2 {
+    margin: 14px 0 5px;
+    color: #172033;
+    font-size: 18px;
+}
+.admin-empty-posts p {
+    max-width: 360px;
+    margin: 0 auto;
+    color: #667085;
+    font-size: 12px;
+    line-height: 1.5;
+}
+@media (max-width: 680px) {
+    .admin-posts-summary {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .admin-posts-summary-count {
+        width: 100%;
+    }
+    .admin-post-card-top {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .admin-post-card-footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .admin-post-management-label {
+        max-width: 100%;
+    }
+    .admin-post-actions {
+        width: 100%;
+    }
+    .admin-post-action {
+        flex: 1;
+    }
+}

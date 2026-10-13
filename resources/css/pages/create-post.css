@@ -1,0 +1,276 @@
+.create-post-card {
+    width: min(760px, 100%);
+    margin: 0 auto 32px;
+    padding: 24px;
+    border: 1px solid #e1e7ef;
+    border-radius: 17px;
+    background: #ffffff;
+    box-shadow:
+        0 8px 28px
+        rgba(31, 41, 55, 0.05);
+}
+.create-post-heading h2 {
+    margin: 5px 0 3px;
+    color: #172033;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+}
+.create-post-heading p {
+    margin: 0 0 20px;
+    color: #667085;
+    font-size: 11px;
+}
+.create-post-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.create-post-field label,
+.post-media-label {
+    display: block;
+    margin-bottom: 7px;
+    color: #344054;
+    font-size: 11px;
+    font-weight: 750;
+}
+.create-post-field input[type="text"] {
+    width: 100%;
+    min-height: 44px;
+    box-sizing: border-box;
+    padding: 0 12px;
+    border: 1px solid #dfe4eb;
+    border-radius: 9px;
+    outline: none;
+    background: #ffffff;
+    color: #344054;
+    font-family: inherit;
+    font-size: 12px;
+    transition:
+        border-color 0.18s ease,
+        box-shadow 0.18s ease;
+}
+.create-post-field input[type="text"]::placeholder {
+    color: #a4acb9;
+}
+.create-post-field input[type="text"]:focus {
+    border-color: #667eea;
+    box-shadow:
+        0 0 0 3px
+        rgba(102, 126, 234, 0.10);
+}
+.create-post-editor {
+    overflow: hidden;
+    border: 1px solid #dfe4eb;
+    border-radius: 10px;
+}
+.create-post-editor .ql-toolbar {
+    border: 0;
+    border-bottom: 1px solid #dfe4eb;
+    background: #f8f9fb;
+}
+.create-post-editor .ql-container {
+    min-height: 135px;
+    border: 0;
+    font-family: inherit;
+}
+.create-post-editor .ql-editor {
+    min-height: 135px;
+    color: #344054;
+    font-size: 12px;
+}
+.create-post-editor .ql-editor.ql-blank::before {
+    color: #a4acb9;
+    font-style: italic;
+}
+.create-post-error {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    padding: 10px 12px;
+    border: 1px solid #f0d3d6;
+    border-radius: 9px;
+    background: #fff7f8;
+    color: #a34d56;
+    font-size: 11px;
+}
+.create-post-error-icon {
+    display: flex;
+    width: 22px;
+    height: 22px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 6px;
+    background: #fff0f1;
+    color: #bd4551;
+    font-weight: 800;
+}
+.post-media-field {
+    margin-top: 0;
+}
+.post-file-picker {
+    display: flex;
+    width: 100%;
+    min-height: 46px;
+    align-items: stretch;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 1px solid #dfe4eb;
+    border-radius: 10px;
+    background: #ffffff;
+    transition:
+        border-color 0.18s ease,
+        box-shadow 0.18s ease;
+}
+.post-file-picker:focus-within {
+    border-color: #667eea;
+    box-shadow:
+        0 0 0 3px
+        rgba(102, 126, 234, 0.10);
+}
+.post-file-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+}
+.post-file-button {
+    display: inline-flex;
+    min-width: 136px;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 0 15px;
+    border-right: 1px solid #dfe4eb;
+    background: #f7f8fb;
+    color: #344054;
+    font-size: 11px;
+    font-weight: 750;
+    cursor: pointer;
+    user-select: none;
+    transition:
+        background-color 0.18s ease,
+        color 0.18s ease;
+}
+.post-file-button:hover {
+    background: #eef1f7;
+    color: #3949ab;
+}
+.post-file-button:active {
+    background: #e8ebf2;
+}
+.post-file-icon {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    background: #eef0ff;
+    color: #4b5bc6;
+    font-size: 14px;
+    font-weight: 800;
+}
+.post-file-name {
+    display: flex;
+    min-width: 0;
+    flex: 1;
+    align-items: center;
+    gap: 8px;
+    padding: 0 13px;
+}
+.post-file-placeholder {
+    overflow: hidden;
+    color: #98a2b3;
+    font-size: 11px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.post-file-selected-icon {
+    display: flex;
+    width: 22px;
+    height: 22px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 6px;
+    background: #edf8ef;
+    color: #4d8b59;
+    font-size: 11px;
+    font-weight: 800;
+}
+.post-file-selected-name {
+    min-width: 0;
+    overflow: hidden;
+    color: #344054;
+    font-size: 11px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.post-file-help {
+    display: block;
+    margin-top: 7px;
+    color: #98a2b3;
+    font-size: 9px;
+    line-height: 1.4;
+}
+.create-post-submit-row {
+    display: flex;
+    justify-content: flex-start;
+}
+.create-post-publish-button {
+    display: inline-flex;
+    min-height: 40px;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 0 18px;
+    border: 1px solid #3949ab;
+    border-radius: 9px;
+    background: #3949ab;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 750;
+    cursor: pointer;
+    transition:
+        transform 0.18s
+            cubic-bezier(0.22, 1, 0.36, 1),
+        background-color 0.18s ease,
+        box-shadow 0.18s ease;
+}
+.create-post-publish-button:hover:not(:disabled) {
+    background: #303f9f;
+    box-shadow:
+        0 6px 15px
+        rgba(57, 73, 171, 0.20);
+    transform: translateY(-1px);
+}
+.create-post-publish-button:active:not(:disabled) {
+    transform: translateY(0);
+}
+.create-post-publish-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+}
+@media (max-width: 520px) {
+    .create-post-card {
+        padding: 18px;
+    }
+    .post-file-picker {
+        flex-direction: column;
+    }
+    .post-file-button {
+        min-height: 43px;
+        border-right: 0;
+        border-bottom: 1px solid #dfe4eb;
+    }
+    .post-file-name {
+        min-height: 43px;
+    }
+}
