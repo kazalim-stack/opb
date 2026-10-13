@@ -9,7 +9,7 @@ import 'quill/dist/quill.snow.css';
 
 import api from '../api';
 
-function CreatePost({ onPostCreated }) {
+function CreatePost({ onPostCreated, onClose, filePickerRequest = 0 }) {
     const editorWrapperRef =
         useRef(null);
 
@@ -33,6 +33,12 @@ function CreatePost({ onPostCreated }) {
 
     const [loading, setLoading] =
         useState(false);
+
+    useEffect(() => {
+        if (filePickerRequest > 0) {
+            fileInputRef.current?.click();
+        }
+    }, [filePickerRequest]);
 
     useEffect(() => {
         const wrapper =
@@ -433,6 +439,15 @@ function CreatePost({ onPostCreated }) {
                 </div>
 
                 <div className="create-post-submit-row">
+                    {onClose && (
+                        <button
+                            type="button"
+                            className="create-post-cancel-button"
+                            onClick={onClose}
+                        >
+                            Cancel
+                        </button>
+                    )}
                     <button
                         type="submit"
                         disabled={loading}

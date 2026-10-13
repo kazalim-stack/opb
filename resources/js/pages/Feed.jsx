@@ -15,6 +15,8 @@ function Feed({ user }) {
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
+    const [composerOpen, setComposerOpen] = useState(false);
+    const [filePickerRequest, setFilePickerRequest] = useState(0);
 
     const [currentPage, setCurrentPage] =
         useState(1);
@@ -406,24 +408,43 @@ function Feed({ user }) {
                 )}
 
 
-                <section className="create-post-card">
-                    <div className="section-heading">
-                        <div>
-                            <span className="section-label">
-                                SHARE SOMETHING
-                            </span>
-
-                            <h2>
-                                Create a Post
-                            </h2>
+                <section className="feed-composer" aria-label="Create a post">
+                    <div className="feed-composer-top">
+                        <div className="feed-composer-avatar" aria-hidden="true">
+                            {(user?.username || '?').charAt(0).toUpperCase()}
                         </div>
+                        <button
+                            type="button"
+                            className="feed-composer-prompt"
+                            aria-expanded={composerOpen}
+                            onClick={() => {
+                                setFilePickerRequest(0);
+                                setComposerOpen((open) => !open);
+                            }}
+                        >
+                            Create something, {user?.username || 'member'}?
+                        </button>
+                        <button
+                            type="button"
+                            className="feed-composer-image"
+                            aria-label="Create a post with an image"
+                            title="Add an image"
+                            onClick={() => {
+                                setComposerOpen(true);
+                                setFilePickerRequest((request) => request + 1);
+                            }}
+                        >
+                            <span aria-hidden="true">▧</span>
+                            <span className="feed-composer-image-label">Photo</span>
+                        </button>
                     </div>
-
-                    <CreatePost
-                        onPostCreated={
-                            handlePostCreated
-                        }
-                    />
+                    {composerOpen && (
+                        <CreatePost
+                            onPostCreated={handlePostCreated}
+                            onClose={() => setComposerOpen(false)}
+                            filePickerRequest={filePickerRequest}
+                        />
+                    )}
                 </section>
 
 

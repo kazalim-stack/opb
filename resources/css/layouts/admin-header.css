@@ -2,6 +2,7 @@
 .user-feed-page {
     min-height: 100vh;
     padding: 30px 36px 50px;
+    overflow-x: clip;
     background:
         linear-gradient(
             180deg,
